@@ -1,0 +1,62 @@
+<html>
+<head>
+    <style>
+        html{
+            background-color: #46b483;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <i>Search by painter:</i>
+    <form method="post">
+        <input type="text" name="painter" placeholder="Painter"/>
+        <button type="submit">Search</button>
+    </form>
+</div>
+<div>
+    <form>
+        <button type="submit" name="back_to_menu">Menu</button>
+    </form>
+</div>
+
+    <div>
+        <table border="2px">
+            <thead>
+            <tr>
+                <th width="50px">Id</th>
+                <th width="200px">Name</th>
+                <th width="150px">Painter</th>
+                <th width="100px">Buyer</th>
+                <th width="150px">Required price</th>
+                <th width="150px">Sale price</th>
+            </tr>
+            </thead>
+            <tbody>
+{{#painters}}
+            <tr>
+                <td title="id" width="50">
+                    <b>{{id}}</b>
+                </td>
+                <td title="name" width="200">
+                    <span>{{name}}</span>
+                </td>
+                <td title="painter" width="150">
+                    <span>{{painter}}</span>
+                </td>
+                <td title="buyer" width="100">
+                    <span>{{buyer}}</span>
+                </td>
+                <td title="asking price" width="150">
+                    <span>{{askingPrice}}</span>
+                </td>
+                <td title="sale price" width="150">
+                    <span>{{salePrice}}</span>
+                </td>
+            </tr>
+{{/painters}}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
